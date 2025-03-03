@@ -19,7 +19,7 @@ async function getAllSongs() {
 async function deleteSong(){
     //grab id of selected song from the dropdown
     const songID = document.querySelector("#songDropDown option:checked").value
-    const response = await fetch("https://cyclic-awake-report.glitch.me/api/songs" + songID, {
+    const response = await fetch("https://cyclic-awake-report.glitch.me/api/songs/" + songID, {
         method: "DELETE"
     })
     if(response.ok){
